@@ -1,0 +1,31 @@
+body{
+    background-color:antiquewhite;
+}
+h1{
+    text-align: center;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+.form{
+    margin: 20px;
+}
+img{
+    height:270px;
+}
+
+.card{
+ 
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+footer{
+    margin-top: 2rem;
+}
