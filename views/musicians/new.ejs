@@ -1,0 +1,22 @@
+<%- include('../partials/headAndNav.ejs', {pageName: "Create a new musician holding a slug"}) %>
+
+<body>
+    <h1>Create a new musician holding a slug</h1>
+    <form method="POST" action="/musicians">
+        <div>
+            <label for="name">Enter the artist's name</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="image">Enter the url for the image</label>
+            <input type="text" name="image" id="image">
+        </div>
+        <div>
+            <label for="instrument">What instrument are they holding?</label>
+            <input type="text" name="instrument" id="instrument">
+        </div>
+        <input type="submit" value="Submit new artist">
+    </form>
+</body>
+
+<%- include('../partials/footer.ejs') %>
