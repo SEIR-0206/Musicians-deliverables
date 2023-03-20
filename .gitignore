@@ -1,1 +1,2 @@
-.gitignore: node_modules/  (will grey-out node_modules in Vscode)
+node_modules/
+.env

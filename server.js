@@ -4,6 +4,8 @@ const musiciansController = require('./controllers/musicians');
 
 app.set('view engine', 'ejs');
 
+app.use(express.static('public'));
+
 app.use('/musicians', musiciansController)
 
 app.get('/', (req, res) => {
