@@ -7,6 +7,8 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
+app.use(express.urlencoded({ extended: false }));
+
 app.use('/snowboarders', snowboardersController);
 
 app.get('/', (req, res) => {
