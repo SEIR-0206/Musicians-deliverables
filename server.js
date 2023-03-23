@@ -5,6 +5,8 @@ const snowboardersController = require('./controllers/snowboarders');
 
 app.set('view engine', 'ejs');
 
+app.use(express.static('public'));
+
 app.use('/snowboarders', snowboardersController);
 
 app.get('/', (req, res) => {
