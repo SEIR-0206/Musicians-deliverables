@@ -1,6 +1,6 @@
 const express =require('express');
-const { Snowboarders } = require('../models');
 const router = express.Router();
+const { Snowboarders } = require('../models');
 
 let mySeedData = [ 
     {
@@ -36,7 +36,7 @@ router.get('/seed', async (req, res, next) => {
     try {
         const deletedOldOnes = await Snowboarders.deleteMany({});
         const addArtists = await Snowboarders.insertMany(mySeedData);
-        console.log(addArtists);
+        console.log(addSnowboarder);
         res.redirect('/snowboarders')
     } catch(err) {
         console.log(err);
@@ -67,6 +67,7 @@ router.post('/', async (req, res, next) => {
     try {
         console.log(req.body);
         const newSnowboarder = await Snowboarders.create(req.body);
+        mySeedData.push(newSnowboarder)
         console.log(newSnowboarder);
         res.redirect('/')
     } catch(err) {
